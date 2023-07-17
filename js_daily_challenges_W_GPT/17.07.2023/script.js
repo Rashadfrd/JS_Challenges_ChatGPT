@@ -34,6 +34,8 @@ function sum(arr) {
   return positiveSum === 0 ? 0 : positiveSum;
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------
+
 // Write a JavaScript function that takes a string as input and returns the reverse of that string. For example, if the input string is "Hello, World!", the function should return "!dlroW ,olleH".
 
 // The same
@@ -63,6 +65,8 @@ function evenNums(arr) {
   return arr.filter((item) => item % 2 === 0);
 }
 
+// ----------------------------------------------------------------------------------------------------------------------------------------
+
 //   Write a JavaScript function that takes a string as input and determines if it is a palindrome. A palindrome is a word, phrase, number, or other sequence of characters that reads the same forward and backward, disregarding spaces, punctuation, and capitalization. The function should return true if the input string is a palindrome and false otherwise.
 
 // For example:
@@ -74,6 +78,8 @@ function palindromeDetector(str) {
   const strReversed = str.split("").reverse().join("");
   return str === strReversed;
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------
 
 //   Write a JavaScript function that takes a number as input and determines if it is a prime number. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. The function should return true if the input number is prime and false otherwise.
 
@@ -108,6 +114,8 @@ function primeNumDetector(num) {
 
   return true;
 }
+
+// ----------------------------------------------------------------------------------------------------------------------------------------
 
 // Write a JavaScript function that takes a sentence as input and returns the longest word in that sentence. If there are multiple longest words, the function should return the first occurrence. A word is defined as a sequence of non-space characters.
 
