@@ -53,3 +53,43 @@ function binarySearch(arr, targetNum) {
 
   return -1; // Target number not found in the array
 }
+
+// -----------------------------------------------------------------------------------------------------------------------------------------
+// Write a function that takes two strings as input and returns true if the two strings are anagrams of each other, and false otherwise. An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+// For example:
+
+// Input: "listen", "silent" -> Output: true (listen and silent are anagrams)
+// Input: "hello", "world" -> Output: false (hello and world are not anagrams)
+
+// My miserable code
+
+function anagramFinder(str1, str2) {
+  if (str1.trim().length !== str2.trim().length) return false;
+
+  let arr1 = str1.split("");
+  let arr2 = str2.split("");
+  let result = 0;
+
+  for (let item of arr2) {
+    if (arr1.includes(item)) result++;
+  }
+
+  return result == str1.length ? true : false;
+}
+
+// GPT code
+
+function anagramChecker(str1, str2) {
+  const cleanStr1 = str1.trim();
+  const cleanStr2 = str2.trim();
+
+  if (cleanStr1.length !== cleanStr2.length) {
+    return false;
+  }
+
+  const sortedStr1 = cleanStr1.split("").sort().join("");
+  const sortedStr2 = cleanStr2.split("").sort().join("");
+
+  return sortedStr1 === sortedStr2;
+}
